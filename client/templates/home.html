@@ -1,0 +1,27 @@
+<div class="grid-container">
+  <h1>Welcome Home!</h1>
+</div>
+<form ng-submit="vm.login()">
+  <section ng-hide="vm.auth" class="block-list small-12 medium-8 medium-offset-2 large-6 large-offset-3">
+    <header>Please login.</header>
+    <ul>
+      <li>
+        <input id="username" type="text" placeholder="Username" ng-model="vm.user.username" required>
+      </li>
+      <li>
+        <input type="password" placeholder="Password" ng-model="vm.user.password" required>
+      </li>
+    </ul>
+  </section>
+</form>
+
+<section class="block-list small-12 medium-8 medium-offset-2 large-6 large-offset-3">
+  <ul>
+    <li ng-hide="vm.auth">
+      <input class="button expand" type="submit" value="Login" ng-click="vm.login()" />
+    </li>
+    <li ng-show="vm.auth">
+      <input class="button expand" type="submit" value="Logout" ng-click="vm.logout()" />
+    </li>
+  </ul>
+</section>

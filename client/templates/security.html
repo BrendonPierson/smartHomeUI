@@ -1,0 +1,44 @@
+<h1>Security</h1>
+
+<section class="block-list small-12 medium-8 medium-offset-2 large-6 large-offset-3">
+  <header>Alarm System</header>
+  <ul>
+    <li>
+      <a ng-show="security.armed" class="button expand large warning" animation-in="slideInDown" ng-click="disarm()">Disarm</a>
+    </li>
+    <li>
+      <span>Arm</span>
+      <div class="large switch">
+        <input type="checkbox" id="arm" ng-true-value="1" ng-false-value="0" ng-model="security.armed">
+        <label for="arm"></label>
+      </div>
+    </li>
+    <li>
+      <span>Arm With Motion</span>
+      <div class="large switch">
+        <input type="checkbox" id="motion" ng-true-value="1" ng-false-value="0" ng-model="security.armedWithMotion">
+        <label for="motion"></label>
+      </div>
+
+    </li>
+    <li>
+      <span>Siren</span>
+      <div class="large switch">
+        <input type="checkbox" id="siren" ng-true-value="1" ng-false-value="0" ng-model="security.siren">
+        <label for="siren"></label>
+      </div>
+
+    </li>
+  </ul>
+</section>
+
+<section class="block-list small-12 medium-8 medium-offset-2 large-6 large-offset-3">
+  <header>Enter Delay</header>
+  <ul>
+    <li>
+      <span>{{security.enterDelay}}</span>
+      <input type="range" id="enterDelay" min="0" max="60" ng-model="security.enterDelay">
+
+    </li>
+  </ul>
+</section>
